@@ -61,8 +61,8 @@ all.tidy <- all.data %>%
   group_by(activity, subject.id) %>%
   summarise_all(mean)
 
-###   store tidy dataset into csv file
-write.csv(all.tidy, file = 'tidydata.csv',row.names = FALSE, quote = FALSE)
+###   store tidy dataset into a text file
+write.table(all.tidy, file = "tidydata.txt", row.names = FALSE, col.names = TRUE)
 
 ### display summary of final tidy dataset
 all.tidy
