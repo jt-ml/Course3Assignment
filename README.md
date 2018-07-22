@@ -21,4 +21,4 @@ The final result produced after executing run_analysis.R is stored in a text fil
 
 
 ### Required R package
-Package "dplyr" is required. 
+- Package "dplyr" version 0.7.6 is used.
