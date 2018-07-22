@@ -94,6 +94,10 @@ The final result dataset after processing has 68 variables and they are.
 2. subject.id variable is Integer type
 3. the rest of variables are all Numeric type
 
+### Data Transformation
+- merged train and test data set into one data set using rbind function
+- tidy dataset using group_by then applying mean on each variables.
+
 ### Data
 The final result dataset stored at a file: tidydata.txt, has 180 observations and each of observations is the average of each varaible for each activity and each subject.
 
