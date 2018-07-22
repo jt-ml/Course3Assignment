@@ -17,6 +17,6 @@ run_analysis.R script will perform following steps:
 8. Tidy dataset and saves final result in a csv file.
 
 ### Result dataset
-The final result produced after executing run_analysis.R is stored in csv file: tidydata.csv
+The final result produced after executing run_analysis.R is stored in a text file: tidydata.txt
 
 
