@@ -8,9 +8,10 @@ Peer-graded assignment: Getting and Cleaning Data Course Project
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-### To use the R script 
-run_analysis.R script will perform following steps
-1. download data source 
+### How does the R script work
+run_analysis.R script will perform following steps:
+
+1. download data source and store it under current working directory
 2. Load both trainning and test dataset into R
 7. Process and analyze dataset based on above requirements
 8. Tidy dataset and saves final result in a csv file.
