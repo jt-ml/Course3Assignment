@@ -7,6 +7,14 @@
 
 library(dplyr)
 
+# 0 download and unzip data source
+data_source_url <-'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
+raw_data_file <- 'rawdata.zip'
+download.file(data_source_url, raw_data_file)
+
+unzip(raw_data_file)
+file.remove(raw_data_file)
+
 # read meta data - activity labels
 activity.labels <- read.table('./UCI HAR Dataset/activity_labels.txt',
                                  col.names = c("activity.id","label"))
@@ -58,7 +66,10 @@ all.tidy <- all.data %>%
   summarise_all(mean)
 
 
-write.csv(all.data, file = 'all.csv', row.names = FALSE)
-write.csv(all.tidy, file = 'all.tidy.csv',row.names = FALSE, quote = FALSE)
+#write.csv(all.data, file = 'all.csv', row.names = FALSE)
+###   store tidy dataset into csv file
+write.csv(all.tidy, file = 'tidydata.csv',row.names = FALSE, quote = FALSE)
 
+### display summary of final tidy dataset
+all.tidy
 
