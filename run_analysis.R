@@ -19,7 +19,6 @@ file.remove(raw_data_file)
 activity.labels <- read.table('./UCI HAR Dataset/activity_labels.txt',
                                  col.names = c("activity.id","label"))
 
-
 # read meta data - features
 features <- read.table('./UCI HAR Dataset/features.txt',
                           col.names = c("id", "feature"))
@@ -48,25 +47,20 @@ all.set <- rbind(train.set, test.set)
 all.labels <- rbind(train.labels, test.labels)
 all.subject <- rbind(train.subject, test.subject)
 
-
 all.labels$activity.label <- factor(all.labels$activity.id, labels = as.character(activity.labels$label))
 
 # 4. Appropriately labels the data set with descriptive variable names
 colnames(all.set) <- selected.features$feature
-
 
 # 5. From the data set in step 4, creates a second, 
 #    independent tidy data set with the average of each variable for each activity and each subject.
 
 all.data <- cbind(all.subject, activity = all.labels$activity.label, all.set)
 
-
 all.tidy <- all.data %>%
   group_by(activity, subject.id) %>%
   summarise_all(mean)
 
-
-#write.csv(all.data, file = 'all.csv', row.names = FALSE)
 ###   store tidy dataset into csv file
 write.csv(all.tidy, file = 'tidydata.csv',row.names = FALSE, quote = FALSE)
 
