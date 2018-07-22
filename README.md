@@ -20,3 +20,5 @@ run_analysis.R script will perform following steps:
 The final result produced after executing run_analysis.R is stored in a text file: tidydata.txt
 
 
+### Required R package
+Package "dplyr" is required. 
