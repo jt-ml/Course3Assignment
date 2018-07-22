@@ -95,7 +95,7 @@ The final result dataset after processing has 68 variables and they are.
 3. the rest of variables are all Numeric type
 
 ### Data
-The final result dataset stored at csv file: tidydata.csv, has 180 observations and each of observations is the average of each varaible for each activity and each subject.
+The final result dataset stored at a file: tidydata.txt, has 180 observations and each of observations is the average of each varaible for each activity and each subject.
 
 
 
