@@ -51,6 +51,12 @@ all.labels$activity.label <- factor(all.labels$activity.id, labels = as.characte
 
 # 4. Appropriately labels the data set with descriptive variable names
 colnames(all.set) <- selected.features$feature
+names(all.set)<-gsub("^t", "Time", names(all.set))
+names(all.set)<-gsub("^f", "Frequency", names(all.set))
+names(all.set)<-gsub("Acc", "Accelerometer", names(all.set))
+names(all.set)<-gsub("Gyro", "Gyroscope", names(all.set))
+names(all.set)<-gsub("Mag", "Magnitude", names(all.set))
+names(all.set)<-gsub("BodyBody", "Body", names(all.set))
 
 # 5. From the data set in step 4, creates a second, 
 #    independent tidy data set with the average of each variable for each activity and each subject.
